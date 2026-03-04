@@ -9,9 +9,16 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js },
     extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
+    },
     rules: {
       "no-inline-comments": "off",
+      "no-unused-vars": "warn",
+      "no-undef": "warn",
     },
   },
   tseslint.configs.recommended,

@@ -1,0 +1,46 @@
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import json from "@eslint/json";
+import { defineConfig } from "eslint/config";
+export default defineConfig([
+    {
+        files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+        plugins: { js },
+        extends: ["js/recommended"],
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                ...globals.jest,
+            },
+        },
+        rules: {
+            "no-inline-comments": "off",
+            "no-unused-vars": "warn",
+            "no-undef": "warn",
+        },
+    },
+    tseslint.configs.recommended,
+    {
+        files: ["**/*.json"],
+        plugins: { json },
+        language: "json/json",
+        extends: ["json/recommended"],
+        rules: {
+            "no-inline-comments": "off",
+        },
+    },
+    {
+        files: ["**/*.jsonc"],
+        plugins: { json },
+        language: "json/jsonc",
+        extends: ["json/recommended"],
+    },
+    {
+        files: ["**/*.json5"],
+        plugins: { json },
+        language: "json/json5",
+        extends: ["json/recommended"],
+    },
+]);
+//# sourceMappingURL=eslint.config.js.map

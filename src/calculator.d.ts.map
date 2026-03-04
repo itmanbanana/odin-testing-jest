@@ -1,0 +1,1 @@
+{"version":3,"file":"calculator.d.ts","sourceRoot":"","sources":["calculator.ts"],"names":[],"mappings":"AAAA,QAAA,MAAM,UAAU;aACE,MAAM,KAAK,MAAM,KAAG,MAAM;kBACrB,MAAM,KAAK,MAAM,KAAG,MAAM;kBAC1B,MAAM,KAAK,MAAM,KAAG,MAAM;kBAC1B,MAAM,OAAO,MAAM,KAAG,MAAM,GAAG,MAAM;CAQxD,CAAC;AAEL,OAAO,EAAE,UAAU,EAAE,CAAA"}
